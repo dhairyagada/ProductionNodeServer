@@ -1,9 +1,9 @@
 import { AbstractRouteController } from "../AbstractRouteController";
-import { IRouteController } from "../IRouteController";
 import {Response,Request} from 'express'
 import { HelloWorld } from "../../serviceclasses/helloworld/HelloWorld";
 import { StatusConstants } from "../../constants/StatusConstants";
-export class HelloWorldRouteController extends AbstractRouteController implements IRouteController{
+
+export class HelloWorldRouteController extends AbstractRouteController {
 
     constructor(link:string){
         super();

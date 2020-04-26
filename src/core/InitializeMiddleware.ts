@@ -10,6 +10,7 @@ export class InitializeMiddleWare{
         await middleware.useBodyParser()
         await middleware.useURLencoded()
         await middleware.useCors()
+        await middleware.logRequests()
     }
 
     public static async InitializeErrorHandlingMiddleware(app :Express){

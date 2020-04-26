@@ -1,5 +1,6 @@
 import { Express } from 'express'
 import { HelloWorldRouteController } from '../routes/helloworld/HelloWorldRouteController'
+import { AbstractRouteController } from '../routes/AbstractRouteController'
 export class InitializeRoutes {
 
     public static async Initialize(app: Express, link: string) {
@@ -10,8 +11,8 @@ export class InitializeRoutes {
         })
     }
 
-    public static async getRoutes(link: string): Promise<Array<any>> {
-        let routes: Array<any> = []
+    public static async getRoutes(link: string): Promise<Array<AbstractRouteController>> {
+        let routes: Array<AbstractRouteController> = []
 
         routes.push(new HelloWorldRouteController(link))
 

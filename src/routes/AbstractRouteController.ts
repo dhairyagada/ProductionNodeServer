@@ -1,6 +1,6 @@
 import express = require("express");
-import { IRouteController } from "./IRouteController";
-export abstract class AbstractRouteController implements IRouteController{
+
+export abstract class AbstractRouteController {
 
     router = express.Router();
     path!: string;
@@ -14,7 +14,6 @@ export abstract class AbstractRouteController implements IRouteController{
 
     public async runService(req: express.Request, resp: express.Response): Promise<any> {
         resp.send('runService Method for ' + this.path + 'does not exist !')
-        throw new Error('runService Method for ' + this.path + 'does not exist !')
     }
 
     public async InitializeGet(){

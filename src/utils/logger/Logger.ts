@@ -1,5 +1,5 @@
 import winston from 'winston'
-import {options} from '../../../configs/LoggerConfig.json'
+import {options} from '@configs/LoggerConfig.json'
 export class Logger {
 
     private logger: winston.Logger

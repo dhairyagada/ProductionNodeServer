@@ -31,7 +31,7 @@ export class CommonMiddleware {
     public async logRequests() {
         let logger = Logger.getLogger()
         this.app.use((req, res, done) => {
-            logger.info(req.originalUrl);
+            logger.info(req.originalUrl)
             done();
         });
     }
